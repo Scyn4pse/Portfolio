@@ -35,7 +35,7 @@ const projects = [
         image: soothera,
         video: soothera2,
         description: "A cross-platform booking system for salons that streamlines appointment scheduling, service management, staff availability, and customer notifications in one intuitive interface.",
-        tech: ["React", "Node.js", "PostgreSQL", "Tailwind"],
+        tech: ["Typescript", "React Native", "Expo", "NativeWind", "C#", "ASP .NET Core Web API", "Python", "FastAPI", "TensorFlow/Keras", "OpenCV", "Hugging Transformers", "Firebase Authentication", "Firebase Firestore", "Paymongo"],
     },
     {
         id: 2,
