@@ -1,81 +1,38 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const experienceRows = [
+const experiences = [
     {
-        alvin: {
-            year: "2025 - Present",
-            role: "QA Engineer",
-            company: "Talleco Job Target",
-            description: "Ensures product quality through automated and manual testing, improving system reliability and release stability."
-        },
-        chiara: {
-            year: "2025 - Present",
-            role: "Freelance Software Developer",
-            company: "Self-employed",
-            description: "Works closely with clients to understand their goals, providing technical consultation and delivering tailored web solutions that align with their specific business needs."
-        }
+        year: "2026 - Present",
+        role: "Part-time College Instructor",
+        company: "Don Bosco Technical College",
+        description: "Teaches web/mobile development, delivers hands-on projects, and evaluates student performance while building practical and industry-relevant skills."
     },
     {
-        alvin: null,
-        chiara: {
-            year: "2025 - 2026",
-            role: "Junior Developer",
-            company: "Cubeworks Technology Consulting and Solutions, Inc.",
-            description: "Develops and maintains responsive web applications, focusing on performance optimization and clean user experience."
-        }
+        year: "2025 - Present",
+        role: "Freelance Software Developer",
+        company: "Self-employed",
+        description: "Works closely with clients to understand their goals, providing technical consultation and delivering tailored web solutions that align with their specific business needs."
     },
     {
-        alvin: {
-            year: "2025 - 2025",
-            role: "QA Engineer Intern",
-            company: "Talleco Job Target",
-            description: "Assisted in writing test cases, identifying bugs, and supporting the QA team in delivering stable feature releases."
-        },
-        chiara: {
-            year: "2025 - 2025",
-            role: "Developer Intern",
-            company: "Cubeworks Technology Consulting and Solutions, Inc.",
-            description: "Supported development of internal and client projects, building UI components and assisting in feature implementation."
-        }
+        year: "2025 - 2026",
+        role: "Junior Developer",
+        company: "Cubeworks Technology Consulting and Solutions, Inc.",
+        description: "Develops and maintains responsive web applications, focusing on performance optimization and clean user experience."
     },
     {
-        alvin: {
-            year: "2024 - Present",
-            role: "Freelance Software Developer",
-            company: "Self-employed",
-            description: "Built custom websites and small-scale systems for clients, focusing on functionality, usability, and performance."
-        },
-        chiara: null,
+        year: "2025 - 2025",
+        role: "Developer Intern",
+        company: "Cubeworks Technology Consulting and Solutions, Inc.",
+        description: "Supported development of internal and client projects, building UI components and assisting in feature implementation."
     },
     {
-        alvin: {
-            year: "2024 - 2024",
-            role: "Alliance Jumpstart Program - Software Developer",
-            company: "Alliance Software, Inc.",
-            description: "Completed intensive training in software development, working on real-world projects and collaborative coding tasks."
-        },
-        chiara: null,
-    },
-    {
-        alvin: null,
-        chiara: {
-            year: "2021 - 2025",
-            role: "Volunteer Student Intern",
-            company: "Cubeworks Technology Consulting and Solutions, Inc.",
-            description: "Gained hands-on experience contributing to various web projects, assisting in frontend tasks and system improvements in real world environment for 4 years."
-        }
-    },
-    {
-        alvin: {
-            year: "2019 - 2024",
-            role: "Freelance Computer Technician",
-            company: "Self-employed",
-            description: "Provided computer repair, maintenance, and software troubleshooting services for individual and small business clients."
-        },
-        chiara: null,
+        year: "2021 - 2025",
+        role: "Volunteer Student Intern",
+        company: "Cubeworks Technology Consulting and Solutions, Inc.",
+        description: "Gained hands-on experience contributing to various web projects, assisting in frontend tasks and system improvements in real world environment for 4 years."
     }
-]
+];
 
 
 const WorkExperience = () => {
@@ -114,7 +71,7 @@ const WorkExperience = () => {
                     variants={containerVariants}
                     className="text-center mb-20"
                 >
-                    <motion.h2 variants={itemVariants} className="text-primary text-sm font-bold uppercase tracking-widest mb-2">Our Journey</motion.h2>
+                    <motion.h2 variants={itemVariants} className="text-primary text-sm font-bold uppercase tracking-widest mb-2">My Journey</motion.h2>
                     <motion.h3 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-white">Work Experience</motion.h3>
                 </motion.div>
 
@@ -142,17 +99,8 @@ const WorkExperience = () => {
                     />
 
                     <div className="space-y-12 md:space-y-0">
-                        {/* Label Row */}
-                        <div className="hidden md:grid md:grid-cols-2 md:gap-24 mb-12">
-                            <div className="text-right pr-4">
-                                <h4 className="text-primary font-bold text-lg tracking-wide">ALVIN</h4>
-                            </div>
-                            <div className="text-left pl-4">
-                                <h4 className="text-primary font-bold text-lg tracking-wide">CHIARA</h4>
-                            </div>
-                        </div>
-                        {experienceRows.map((row, index) => (
-                            <TimelineRow key={index} row={row} index={index} />
+                        {experiences.map((experience, index) => (
+                            <TimelineRow key={index} experience={experience} index={index} />
                         ))}
                     </div>
                 </div>
@@ -161,8 +109,10 @@ const WorkExperience = () => {
     );
 };
 
-// Subcomponent for a timeline row containing Alvin (left) and/or Chiara (right)
-const TimelineRow = ({ row, index }) => {
+// Subcomponent for a timeline row
+const TimelineRow = ({ experience, index }) => {
+    const isLeft = index % 2 === 0;
+
     return (
         <div className="relative md:grid md:grid-cols-2 md:gap-24 mb-12 last:mb-0">
             {/* Center Dot - only visible on Desktop */}
@@ -175,21 +125,21 @@ const TimelineRow = ({ row, index }) => {
                 />
             </div>
 
-            {/* Alvin's Side (Left) */}
+            {/* Left Side */}
             <div className="relative mb-8 md:mb-0">
-                {row.alvin ? (
-                    <ExperienceCard data={row.alvin} side="left" index={index} />
+                {isLeft ? (
+                    <ExperienceCard data={experience} side="left" index={index} />
                 ) : (
-                    <div className="hidden md:block" /> // Empty space if no experience for Alvin in this row
+                    <div className="hidden md:block" /> // Empty space if experience is on the right
                 )}
             </div>
 
-            {/* Chiara's Side (Right) */}
+            {/* Right Side */}
             <div className="relative">
-                {row.chiara ? (
-                    <ExperienceCard data={row.chiara} side="right" index={index} />
+                {!isLeft ? (
+                    <ExperienceCard data={experience} side="right" index={index} />
                 ) : (
-                    <div className="hidden md:block" /> // Empty space if no experience for Chiara in this row
+                    <div className="hidden md:block" /> // Empty space if experience is on the left
                 )}
             </div>
         </div>

@@ -21,7 +21,7 @@ const Chatbot = () => {
                                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                                     <MessageSquare size={16} className="text-white" />
                                 </div>
-                                <span className="text-white font-bold">DevDuo Assistant</span>
+                                <span className="text-white font-bold">Chiara's Assistant</span>
                             </div>
                             <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white">
                                 <X size={20} />
@@ -31,7 +31,7 @@ const Chatbot = () => {
                         {/* Body */}
                         <div className="h-80 p-4 overflow-y-auto bg-dark flex flex-col gap-3">
                             <div className="self-start bg-secondary text-slate-300 p-3 rounded-2xl rounded-tl-none max-w-[85%] text-sm border border-white/5">
-                                Hi there! 👋 How can we help you create something amazing today?
+                                Hi there! 👋 How can I help you create something amazing today?
                             </div>
                         </div>
 

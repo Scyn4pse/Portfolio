@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
                 {children}
             </main>
             <footer className="relative z-10 py-8 text-center text-slate-500 text-sm">
-                <p>&copy; {new Date().getFullYear()} Creative Duo. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Chiara Marie C. Canque. All rights reserved.</p>
             </footer>
         </div>
     );

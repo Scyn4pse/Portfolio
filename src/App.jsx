@@ -21,7 +21,6 @@ function App() {
       <Hackathons />
       <Testimonials />
       <Contact />
-      <Chatbot />
     </Layout>
   );
 }

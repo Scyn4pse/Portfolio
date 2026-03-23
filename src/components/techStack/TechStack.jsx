@@ -15,7 +15,7 @@ const techStackData = [
     {
         title: 'Programming',
         label: 'Core',
-        tags: ['C', 'C#', 'Java', 'JavaScript', 'PHP', 'Kotlin', 'Assembly', 'Python', 'XML'],
+        tags: ['C', 'C#', 'Java', 'JavaScript', 'PHP', 'Kotlin', 'Assembly', 'XML'],
         icon: <Terminal size={20} />,
         color: 'rgba(2, 6, 23, 0.5)'
     },
@@ -29,7 +29,7 @@ const techStackData = [
     {
         title: 'AI & ML',
         label: 'Intelligence',
-        tags: ['OpenCV', 'TensorFlow', 'Keras', 'HuggingFace', 'Transformers'],
+        tags: ['Google AI Studio'],
         icon: <Cpu size={20} />,
         color: 'rgba(2, 6, 23, 0.5)'
     },

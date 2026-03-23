@@ -39,87 +39,6 @@ const projects = [
     },
     {
         id: 2,
-        title: "Hybrid P2B Lending Platform System",
-        category: "Web Application",
-        image: kuwago,
-        video: kuwago2,
-        description: "A secure lending platform connecting private lenders and businesses, featuring loan tracking, approval workflows, repayment monitoring, and financial dashboards.",
-        tech: ["Typescript", "Next.js", "Tailwind", "C#", "ASP .NET Core Web API", "Python", "FastAPI", "TesnsorFlow/Keras", "OpenCV", "Hugging Transformers", "Firebase Authentication", "Firebase Firestore", "Paymongo"],
-    },
-    {
-        id: 3,
-        title: "Training Management System",
-        category: "Web Application",
-        image: mimanuui,
-        video: mimanuui2,
-        description: "A centralized platform for managing employee or student training programs, tracking progress, attendance, certifications, and performance evaluations.",
-        tech: ["Javscript", "React.js", "Tailwind", "C#", "ASP .NET Core Web API", "Python", "FastAPI", "OpenAI", "OpenCV", "Hugging Transformers", "Firebase Authentication", "Firebase Firestore", "Paymongo"],
-    },
-    {
-        id: 4,
-        title: "Veterinary Services Information and Assistance System",
-        category: "Mobile Application",
-        image: cvoui,
-        video: cvoui2,
-        description: "A digital system for managing veterinary records, patient history, appointment scheduling, and public service information for efficient clinic operations.",
-        tech: ["Javscript", "React.js", "Tailwind", "C#", "ASP .NET Core Web API", "Python", "FastAPI", "OpenAI", "MVVM", "Java", "XML", "Firebase Authentication", "Firebase Firestore",],
-    },
-    {
-        id: 5,
-        title: "Mental Healthcare Facility Provider and Assistant Application",
-        category: "Cross-Platform Application",
-        image: helpkonnect,
-        video: helpkonnect2,
-        description: "A mental health support platform that connects patients with providers, manages consultations, tracks progress, and offers digital assistance tools for care management.",
-        tech: ["Javscript", "React.js", "Tailwind", "C#", "ASP .NET Core Web API", "Python", "FastAPI", "OpenAI", "OpenCV", "Hugging Transformers", "MVVM", "Java", "XML", "Firebase Authentication", "Firebase Firestore", "Mapbox"],
-    },
-    {
-        id: 6,
-        title: "AI-Powered Water Delivery System",
-        category: "Cross-Platform Application",
-        image: aquaroute,
-        video: aquaroute2,
-        description: "An intelligent delivery management app that automates scheduling, optimizes routes, predicts demand, and coordinates drivers for efficient water distribution.",
-        tech: ["Kotlin", "XML", "Firebase Firestore", "Firebase Authentication", "Google Maps API", "Gemini AI", "React (Vite)", "Cloudflare", "Javascript"],
-    },
-    {
-        id: 7,
-        title: "Web-Based POS System",
-        category: "Web Application",
-        image: psits,
-        video: psits2,
-        description: "A browser-based point-of-sale system for handling transactions, managing products, tracking sales, and generating financial reports in real time.",
-        tech: ["React.js", "Express.js", "Node.js", "MongoDB"],
-    },
-    {
-        id: 8,
-        title: "Booking & Reservation System",
-        category: "Web Application",
-        image: trabahub,
-        video: trabahub2,
-        description: "A flexible reservation platform for managing bookings, customer details, schedules, and availability for service-based businesses.",
-        tech: ["C#", "ASP .NET", "MVC", "HTML", "Tailwind", "Javascript", "AJAX", "Python", "FastAPI", "MSSQL", "Mapbox"],
-    },
-    {
-        id: 9,
-        title: "IoT Building Management System",
-        category: "Web Application",
-        image: iot,
-        video: iot2,
-        description: "An IoT-integrated platform for monitoring, controlling and automating building utilities such as lighting, temperature, and energy usage through real-time actions, specifically focusing on HVAC.",
-        tech: ["MQTT", "HTML/Javascript", "Node.js", "Cloudflare"],
-    },
-    {
-        id: 10,
-        title: "Municipal LGU-LCR Records Management System",
-        category: "Web Application",
-        image: lgu,
-        video: lgu2,
-        description: "A digital records management system for local government civil registry offices, organizing birth, marriage, and death records with secure access and retrieval.",
-        tech: ["MVC", "HTML/Javascript", "ASP.NET", "MSSQL Server", "IIS"],
-    },
-    {
-        id: 11,
         title: "Personal Finance Management Application",
         category: "Mobile Application",
         image: splitmoney,
@@ -128,7 +47,43 @@ const projects = [
         tech: ["React Native", "SQLite", "Tailwind", "Python", "FastAPI", "OpenAI"],
     },
     {
-        id: 12,
+        id: 3,
+        title: "AI-Powered Water Delivery System",
+        category: "Cross-Platform Application",
+        image: aquaroute,
+        video: aquaroute2,
+        description: "An intelligent delivery management app that automates scheduling, optimizes routes, predicts demand, and coordinates drivers for efficient water distribution.",
+        tech: ["Kotlin", "XML", "Firebase Firestore", "Firebase Authentication", "Google Maps API", "Gemini AI", "React (Vite)", "Cloudflare", "Javascript"],
+    },
+    {
+        id: 4,
+        title: "IoT Building Management System",
+        category: "Web Application",
+        image: iot,
+        video: iot2,
+        description: "An IoT-integrated platform for monitoring, controlling and automating building utilities such as lighting, temperature, and energy usage through real-time actions, specifically focusing on HVAC.",
+        tech: ["MQTT", "HTML/Javascript", "Node.js", "Cloudflare"],
+    },
+    {
+        id: 5,
+        title: "Municipal LGU-LCR Records Management System",
+        category: "Web Application",
+        image: lgu,
+        video: lgu2,
+        description: "A digital records management system for local government civil registry offices, organizing birth, marriage, and death records with secure access and retrieval.",
+        tech: ["MVC", "HTML/Javascript", "ASP.NET", "MSSQL Server", "IIS"],
+    },
+    {
+        id: 6,
+        title: "Hybrid P2B Lending Platform System",
+        category: "Web Application",
+        image: kuwago,
+        video: kuwago2,
+        description: "A secure lending platform connecting private lenders and businesses, featuring loan tracking, approval workflows, repayment monitoring, and financial dashboards.",
+        tech: ["Typescript", "Next.js", "Tailwind", "C#", "ASP .NET Core Web API", "Python", "FastAPI", "TesnsorFlow/Keras", "OpenCV", "Hugging Transformers", "Firebase Authentication", "Firebase Firestore", "Paymongo"],
+    },
+    {
+        id: 7,
         title: "POS Inventory and Manufacturing System",
         category: "Web Application",
         image: kayu,
@@ -496,12 +451,12 @@ const FeaturedWorks = () => {
                                             </div>
 
                                             <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-                                                <button className="flex-1 py-4 bg-primary text-white rounded-xl font-bold hover:bg-sky-600 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1 shadow-lg shadow-primary/20">
+                                                {/* <button className="flex-1 py-4 bg-primary text-white rounded-xl font-bold hover:bg-sky-600 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1 shadow-lg shadow-primary/20">
                                                     <ExternalLink size={20} /> Live Demo
                                                 </button>
                                                 <button className="flex-1 py-4 bg-zinc-800 text-white rounded-xl font-bold hover:bg-zinc-700 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1">
                                                     <Github size={20} /> Source Code
-                                                </button>
+                                                </button> */}
                                             </div>
                                         </div>
                                     </div>

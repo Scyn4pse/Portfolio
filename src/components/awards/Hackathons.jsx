@@ -13,34 +13,6 @@ import hackathon09 from '../../assets/awards/hackathon09.jpg';
 
 const awards = [
     {
-        title: "Ready Tensor Agentic AI Competition",
-        award: "Participant",
-        image: hackathon09,
-        description: "Explored agentic AI concepts by building intelligent task-driven solutions using modern AI tools and frameworks.",
-        date: "February 2025"
-    },
-    {
-        title: "CIB.O Cebu Interschool Hackathon",
-        award: "2nd Place Education Category",
-        image: hackathon08,
-        description: "Developed an education-focused digital solution designed to improve accessibility, engagement, and learning efficiency for students.",
-        date: "June 2024"
-    },
-    {
-        title: "UC ICT Congress Intercampus Hackathon",
-        award: "Special Awards",
-        image: hackathon07,
-        description: "Built an innovative web-based platform addressing real-world user needs through practical and scalable system design.",
-        date: "April 2024"
-    },
-    {
-        title: "UC-Banilad CCS Days UI/UX Design Contest",
-        award: "2nd Place",
-        image: hackathon06,
-        description: "Designed a clean, user-centered interface focused on usability, accessibility, and intuitive user experience.",
-        date: "March 2024"
-    },
-    {
         title: "Intercampus Java Quiz Bowl",
         award: "2nd Place",
         image: hackathon05,

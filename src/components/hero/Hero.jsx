@@ -31,7 +31,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "out" }}
                 >
                     <h2 className="text-primary font-medium tracking-wider mb-4 uppercase">
-                        Creative Software Duo
+                        Creative Software Developer
                     </h2>
                     <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold mb-6 tracking-tight">
                         <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
@@ -51,7 +51,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                        We are a Frontend & Backend powerhouse. Crafting immersive digital experiences
+                        I am a Frontend Developer. Crafting immersive digital experiences
                         with robust performance and stunning visuals.
                     </p>
 
@@ -66,14 +66,14 @@ const Hero = () => {
                             onClick={(e) => handleScroll(e, '#featured-works')}
                             className="px-8 py-4 bg-white text-dark font-bold rounded-full hover:bg-slate-200 transition-all hover:scale-105 pointer-events-auto"
                         >
-                            View Our Work
+                            View My Work
                         </a>
                         <a
                             href="#contact"
                             onClick={(e) => handleScroll(e, '#contact')}
                             className="px-8 py-4 border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all hover:scale-105 backdrop-blur-sm pointer-events-auto"
                         >
-                            Contact Us
+                            Contact Me
                         </a>
                     </motion.div>
                 </motion.div>

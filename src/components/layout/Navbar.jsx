@@ -36,7 +36,7 @@ const Navbar = () => {
     };
 
     const navLinks = [
-        { name: 'Who We Are', href: '#who-we-are' },
+        { name: 'About Me', href: '#who-we-are' },
         { name: 'Featured Works', href: '#featured-works' },
         { name: 'Experience', href: '#experience' },
         { name: 'Contact', href: '#contact' },
@@ -54,7 +54,7 @@ const Navbar = () => {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary to-indigo-400 bg-clip-text text-transparent" onClick={(e) => handleScroll(e, '#home')}>
-                    DEV<span className="text-white">DUO</span>.
+                    CHIARA<span className="text-white">DEV</span>.
                 </a>
 
                 {/* Desktop Menu */}

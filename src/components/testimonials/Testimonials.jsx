@@ -19,30 +19,6 @@ const testimonials = [
     },
     {
         id: 2,
-        name: "MiManuTMS",
-        role: "FinTech Masteral Capstone",
-        content: "They handled complex functionalities with ease and transformed them into a fast, reliable, and user-friendly platform. The workflow is smooth, the UI/UX feels natural, and every requirement was met exactly as expected.",
-        image: MiManu,
-        bgImage: MiManu
-    },
-    {
-        id: 3,
-        name: "TrabaHub",
-        role: "FinTech Masteral Capstone",
-        content: "The application runs efficiently with optimized performance and well-executed advanced features. The interface is clean, intuitive, and easy for users to navigate. Overall satisfaction from us has been outstanding.",
-        image: TrabaHub,
-        bgImage: TrabaHub
-    },
-    {
-        id: 4,
-        name: "City Veterinary Office",
-        role: "Senior High School Capstone",
-        content: "The system streamlined our daily operations and made record management faster and more organized. It’s reliable, easy to use, and has greatly improved how we serve the community.",
-        image: CVO,
-        bgImage: CVO
-    },
-    {
-        id: 5,
         name: "Soothera",
         role: "FinTech Masteral Capstone",
         content: "The platform strengthened our workflow with stable performance and smart features. It helped businesses operate more efficiently while providing a smooth and intuitive experience for our users.",
@@ -50,7 +26,7 @@ const testimonials = [
         bgImage: Soothera
     },
     {
-        id: 6,
+        id: 3,
         name: "Kayu",
         role: "Engraver Business",
         content: "This system helped us manage orders and customer requests more effectively. It improved our process, saved time, and made our business operations much more organized.",

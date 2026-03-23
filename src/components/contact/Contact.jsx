@@ -70,8 +70,8 @@ const Contact = () => {
                         <h2 className="text-primary text-sm font-bold uppercase tracking-widest mb-2">Get In Touch</h2>
                         <h3 className="text-4xl md:text-6xl font-bold text-white mb-6">Let's Create Something Amazing.</h3>
                         <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-                            Have a project in mind? We are always looking for new challenges and opportunities to collaborate.
-                            Send us a message and let's start the conversation.
+                            Have a project in mind? I am always looking for new challenges and opportunities to collaborate.
+                            Send me a message and let's start the conversation.
                         </p>
 
                         <div className="space-y-6">
@@ -80,8 +80,8 @@ const Contact = () => {
                                     <Mail size={24} />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-slate-500">Email Us</p>
-                                    <p className="font-medium">devduo.codes@gmail.com</p>
+                                    <p className="text-sm text-slate-500">Email Me</p>
+                                    <p className="font-medium">canquechiara76@gmail.com</p>
                                 </div>
                             </div>
 
@@ -108,7 +108,7 @@ const Contact = () => {
                         <form onSubmit={handleSubmit} className="bg-secondary p-8 rounded-3xl border border-white/5 space-y-6">
                             {success && (
                                 <div className="bg-green-500/10 border border-green-500/20 text-green-400 px-4 py-3 rounded-xl text-sm">
-                                    Message sent successfully! We'll get back to you soon.
+                                    Message sent successfully! I'll get back to you soon.
                                 </div>
                             )}
                             {error && (
@@ -179,7 +179,7 @@ const Contact = () => {
                                     required
                                     rows="4"
                                     className={`w-full bg-dark border rounded-xl px-4 py-3 text-white focus:outline-primary focus:border-transparent transition-all resize-none ${validationErrors.message ? 'border-red-500/50' : 'border-slate-700'}`}
-                                    placeholder="Tell us about your project..."
+                                    placeholder="Tell me about your project..."
                                 ></textarea>
                                 {validationErrors.message && <p className="text-red-400 text-xs ml-1">{validationErrors.message}</p>}
                             </div>
