@@ -495,14 +495,14 @@ const FeaturedWorks = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                                            {/* <div className="flex flex-col sm:flex-row gap-4 mt-auto">
                                                 <button className="flex-1 py-4 bg-primary text-white rounded-xl font-bold hover:bg-sky-600 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1 shadow-lg shadow-primary/20">
                                                     <ExternalLink size={20} /> Live Demo
                                                 </button>
                                                 <button className="flex-1 py-4 bg-zinc-800 text-white rounded-xl font-bold hover:bg-zinc-700 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1">
                                                     <Github size={20} /> Source Code
                                                 </button>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 );
