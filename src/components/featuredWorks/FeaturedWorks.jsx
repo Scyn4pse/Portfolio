@@ -32,6 +32,7 @@ const projects = [
         id: 1,
         title: "Salon Services Booking Platform",
         category: "Cross-Platform Application",
+        tag: "Masteral Capstone",
         image: soothera,
         video: soothera2,
         description: "A cross-platform booking system for salons that streamlines appointment scheduling, service management, staff availability, and customer notifications in one intuitive interface.",
@@ -41,6 +42,7 @@ const projects = [
         id: 2,
         title: "Hybrid P2B Lending Platform System",
         category: "Web Application",
+        tag: "Masteral Capstone",
         image: kuwago,
         video: kuwago2,
         description: "A secure lending platform connecting private lenders and businesses, featuring loan tracking, approval workflows, repayment monitoring, and financial dashboards.",
@@ -50,6 +52,7 @@ const projects = [
         id: 3,
         title: "Training Management System",
         category: "Web Application",
+        tag: "Mitsumi",
         image: mimanuui,
         video: mimanuui2,
         description: "A centralized platform for managing employee or student training programs, tracking progress, attendance, certifications, and performance evaluations.",
@@ -59,6 +62,7 @@ const projects = [
         id: 4,
         title: "Veterinary Services Information and Assistance System",
         category: "Mobile Application",
+        tag: "Mandaue Veterinary Office",
         image: cvoui,
         video: cvoui2,
         description: "A digital system for managing veterinary records, patient history, appointment scheduling, and public service information for efficient clinic operations.",
@@ -68,6 +72,7 @@ const projects = [
         id: 5,
         title: "Mental Healthcare Facility Provider and Assistant Application",
         category: "Cross-Platform Application",
+        tag: "College Capstone",
         image: helpkonnect,
         video: helpkonnect2,
         description: "A mental health support platform that connects patients with providers, manages consultations, tracks progress, and offers digital assistance tools for care management.",
@@ -77,6 +82,7 @@ const projects = [
         id: 6,
         title: "AI-Powered Water Delivery System",
         category: "Cross-Platform Application",
+        tag: "College Capstone",
         image: aquaroute,
         video: aquaroute2,
         description: "An intelligent delivery management app that automates scheduling, optimizes routes, predicts demand, and coordinates drivers for efficient water distribution.",
@@ -86,6 +92,7 @@ const projects = [
         id: 7,
         title: "Web-Based POS System",
         category: "Web Application",
+        tag: "UC-Banilad",
         image: psits,
         video: psits2,
         description: "A browser-based point-of-sale system for handling transactions, managing products, tracking sales, and generating financial reports in real time.",
@@ -95,6 +102,7 @@ const projects = [
         id: 8,
         title: "Booking & Reservation System",
         category: "Web Application",
+        tag: "Masteral Capstone",
         image: trabahub,
         video: trabahub2,
         description: "A flexible reservation platform for managing bookings, customer details, schedules, and availability for service-based businesses.",
@@ -104,6 +112,7 @@ const projects = [
         id: 9,
         title: "IoT Building Management System",
         category: "Web Application",
+        tag: "Client",
         image: iot,
         video: iot2,
         description: "An IoT-integrated platform for monitoring, controlling and automating building utilities such as lighting, temperature, and energy usage through real-time actions, specifically focusing on HVAC.",
@@ -113,6 +122,7 @@ const projects = [
         id: 10,
         title: "Municipal LGU-LCR Records Management System",
         category: "Web Application",
+        tag: "Lapu-lapu",
         image: lgu,
         video: lgu2,
         description: "A digital records management system for local government civil registry offices, organizing birth, marriage, and death records with secure access and retrieval.",
@@ -122,6 +132,7 @@ const projects = [
         id: 11,
         title: "Personal Finance Management Application",
         category: "Mobile Application",
+        tag: "Personal",
         image: splitmoney,
         video: splitmoney2,
         description: "A mobile app for tracking income, expenses, savings, budgets, bills, debts, salary portions, automated reminders, and AI insights helping users manage their finances with clear insights and spending analytics.",
@@ -131,6 +142,7 @@ const projects = [
         id: 12,
         title: "POS Inventory and Manufacturing System",
         category: "Web Application",
+        tag: "Engraving Business",
         image: kayu,
         video: kayu2,
         description: "A full-featured POS and inventory management system that streamlines sales, stock tracking, and product management. Includes advanced manufacturing costing modules with dynamic cost tracking, per-unit production computation, production-based payroll, and financial dashboards with AI-driven insights for profitability and operational efficiency.",
@@ -431,6 +443,9 @@ const FeaturedWorks = () => {
                                             <div data-subtitle className="slide-info--text">
                                                 <span>{project.category}</span>
                                             </div>
+                                            <div data-subtitle className="slide-info--text mt-2">
+                                                <span className="text-xs bg-primary text-white px-3 py-1 rounded-full font-bold tracking-wider uppercase shadow-lg shadow-primary/30 w-fit !inline-block">{project.tag}</span>
+                                            </div>
                                             <div data-description className="slide-info--text">
                                                 <span>{project.description}</span>
                                             </div>
@@ -478,7 +493,10 @@ const FeaturedWorks = () => {
                                         </div>
 
                                         <div className="p-8 md:p-12 md:w-1/2 flex flex-col">
-                                            <span className="text-primary font-bold tracking-widest text-sm mb-4 uppercase">{project.category}</span>
+                                            <div className="flex flex-col items-start gap-3 mb-4">
+                                                <span className="text-primary font-bold tracking-widest text-sm uppercase">{project.category}</span>
+                                                <span className="px-3 py-1 bg-primary text-white rounded-md text-xs font-bold uppercase tracking-wider shadow-lg shadow-primary/30 w-fit">{project.tag}</span>
+                                            </div>
                                             <h2 className="text-4xl font-bold text-white mb-6">{project.title}</h2>
                                             <p className="text-zinc-400 mb-8 leading-relaxed text-lg">
                                                 {project.description}
