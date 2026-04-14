@@ -252,6 +252,10 @@ const ProfileCardComponent = ({
         shell.addEventListener('pointerleave', pointerLeaveHandler);
 
         const handleClick = () => {
+            if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+                shell.classList.toggle('mobile-active');
+            }
+
             if (!enableMobileTilt || (typeof window !== 'undefined' && window.location.protocol !== 'https:')) return;
             const anyMotion = window.DeviceMotionEvent;
             if (anyMotion && typeof anyMotion.requestPermission === 'function') {

@@ -60,13 +60,27 @@ const testimonials = [
 ];
 
 const FlipCard = ({ t, i }) => {
+    const [isFlipped, setIsFlipped] = React.useState(false);
+    const [isMobile, setIsMobile] = React.useState(false);
+
+    React.useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
-        <div className="group w-full h-[280px] sm:h-[300px] md:aspect-video [perspective:1200px]">
+        <div 
+            className="group w-full h-[280px] sm:h-[300px] md:aspect-video [perspective:1200px]"
+            onClick={() => { if (isMobile) setIsFlipped(!isFlipped); }}
+        >
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                whileHover={{ rotateY: 180 }}
+                whileHover={!isMobile ? { rotateY: 180 } : undefined}
+                animate={isMobile ? { rotateY: isFlipped ? 180 : 0 } : undefined}
                 transition={{
                     duration: 0.6,
                     ease: [0.22, 1, 0.36, 1],

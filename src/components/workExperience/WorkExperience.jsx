@@ -121,7 +121,7 @@ const WorkExperience = () => {
                 {/* Timeline Container */}
                 <div className="relative max-w-5xl mx-auto">
                     {/* Central Line Background (Dark) */}
-                    <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-slate-800 -translate-x-1/2 rounded-full hidden md:block" />
+                    <div className="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 -translate-x-1/2 rounded-full" />
 
                     {/* Moving Line (Primary Color) with Shimmer */}
                     <motion.div
@@ -138,7 +138,7 @@ const WorkExperience = () => {
                             repeat: Infinity,
                             ease: "linear"
                         }}
-                        className="absolute left-1/2 top-0 w-1 -translate-x-1/2 rounded-full origin-top shadow-[0_0_25px_rgba(255,255,255,0.9),0_0_15px_rgba(14,165,233,0.6)] hidden md:block"
+                        className="absolute left-[24px] md:left-1/2 top-0 w-1 -translate-x-1/2 rounded-full origin-top shadow-[0_0_25px_rgba(255,255,255,0.9),0_0_15px_rgba(14,165,233,0.6)]"
                     />
 
                     <div className="space-y-12 md:space-y-0">
@@ -166,7 +166,7 @@ const TimelineRow = ({ row, index }) => {
     return (
         <div className="relative md:grid md:grid-cols-2 md:gap-24 mb-12 last:mb-0">
             {/* Center Dot - only visible on Desktop */}
-            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-[#0a0a0a] border-4 border-slate-700 rounded-full z-20 hidden md:block">
+            <div className="absolute left-[24px] md:left-1/2 top-8 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-[#0a0a0a] border-4 border-slate-700 rounded-full z-20 hidden md:block">
                 <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
@@ -176,18 +176,28 @@ const TimelineRow = ({ row, index }) => {
             </div>
 
             {/* Alvin's Side (Left) */}
-            <div className="relative mb-8 md:mb-0">
+            <div className="relative mb-8 md:mb-0 pl-14 md:pl-0">
+                {row.alvin && (
+                    <div className="absolute left-[24px] top-8 -translate-x-1/2 w-4 h-4 bg-[#0a0a0a] border-4 border-slate-700 rounded-full z-20 md:hidden block">
+                        <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true, margin: "-30% 0px -20% 0px" }} className="w-full h-full bg-primary rounded-full shadow-[0_0_10px_#0ea5e9]" />
+                    </div>
+                )}
                 {row.alvin ? (
-                    <ExperienceCard data={row.alvin} side="left" index={index} />
+                    <ExperienceCard data={row.alvin} side="left" index={index} owner="alvin" />
                 ) : (
                     <div className="hidden md:block" /> // Empty space if no experience for Alvin in this row
                 )}
             </div>
 
             {/* Chiara's Side (Right) */}
-            <div className="relative">
+            <div className="relative pl-14 md:pl-0">
+                {row.chiara && (
+                    <div className="absolute left-[24px] top-8 -translate-x-1/2 w-4 h-4 bg-[#0a0a0a] border-4 border-slate-700 rounded-full z-20 md:hidden block">
+                        <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true, margin: "-30% 0px -20% 0px" }} className="w-full h-full bg-primary rounded-full shadow-[0_0_10px_#0ea5e9]" />
+                    </div>
+                )}
                 {row.chiara ? (
-                    <ExperienceCard data={row.chiara} side="right" index={index} />
+                    <ExperienceCard data={row.chiara} side="right" index={index} owner="chiara" />
                 ) : (
                     <div className="hidden md:block" /> // Empty space if no experience for Chiara in this row
                 )}
@@ -196,7 +206,7 @@ const TimelineRow = ({ row, index }) => {
     );
 };
 
-const ExperienceCard = ({ data, side, index }) => {
+const ExperienceCard = ({ data, side, index, owner }) => {
     const isLeft = side === "left";
 
     return (
@@ -211,7 +221,14 @@ const ExperienceCard = ({ data, side, index }) => {
             <div className={`absolute inset-0 bg-gradient-to-br ${isLeft ? 'from-sky-500/5 to-transparent' : 'from-indigo-500/5 to-transparent'} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
             <div className="relative z-10">
-                <span className="text-primary font-mono text-xs font-bold mb-2 block tracking-wider opacity-80">{data.year}</span>
+                <div className="flex justify-between items-center mb-2">
+                    <span className="text-primary font-mono text-xs font-bold block tracking-wider opacity-80">{data.year}</span>
+                    {owner && (
+                        <span className="md:hidden text-xs font-bold bg-primary/20 text-primary px-2 py-1 rounded tracking-wide uppercase">
+                            {owner}
+                        </span>
+                    )}
+                </div>
                 <h4 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">{data.role}</h4>
                 <h5 className="text-slate-300 font-medium text-sm mb-4">{data.company}</h5>
                 <p className="text-slate-400 text-sm leading-relaxed font-light">

@@ -34,7 +34,7 @@
     perspective: 500px;
     transform: translate3d(0, 0, 0.1px);
     position: relative;
-    touch-action: none;
+    touch-action: pan-y;
 }
 
 .pc-behind {
@@ -559,7 +559,8 @@
 }
 
 .pc-card:hover .pc-skills-overlay,
-.pc-card.active .pc-skills-overlay {
+.pc-card.active .pc-skills-overlay,
+.pc-card-shell.mobile-active .pc-skills-overlay {
     opacity: 1;
     transform: translateY(0) scale(1);
     backdrop-filter: blur(16px);

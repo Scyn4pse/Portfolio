@@ -106,6 +106,15 @@
     line-clamp: 3;
 }
 
+@media (max-width: 768px) {
+    .magic-bento-card--text-autohide .magic-bento-card__title,
+    .magic-bento-card--text-autohide .magic-bento-card__description {
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        display: block;
+    }
+}
+
 @media (max-width: 599px) {
     .card-grid {
         grid-template-columns: 1fr;
