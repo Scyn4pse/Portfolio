@@ -2,10 +2,38 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const experienceRows = [
+     {
+        alvin: {
+            year: "2026 - Present",
+            role: "Game QA Engineer",
+            company: "Kingsisle Entertainment",
+            description: "Performs manual, Ad hoc, and automated testing to identify bugs, validate gameplay functionality, and ensure high-quality game releases through thorough quality assurance processes."
+        },
+        chiara: {
+            year: "2026 - Present",
+            role: "Part-time College Faculty",
+            company: "iACADEMY Cebu",
+            description: "Teaches UI/UX design principles and industry-standard practices, guiding students in creating user-centered digital experiences through research, wireframing, prototyping, and usability testing."
+        }
+    },
+     {
+        alvin: {
+            year: "2026 - Present",
+            role: "Part-time College Faculty",
+            company: "Don Bosco Technical College",
+            description: "Delivered instruction across core and advanced IT disciplines, including software development, API integration, database systems, version control, AI concepts, and SDLC methodologies, while facilitating hands-on projects that strengthened students’ technical skills and real-world problem-solving abilities."
+        },
+        chiara: {
+            year: "2026 - Present",
+            role: "Part-time College Faculty",
+            company: "Don Bosco Technical College",
+            description: "Delivered instruction in software and systems development, mentoring students in industry best practices, problem-solving, and the use of diverse technologies to design, build, and maintain quality digital solutions."
+        }
+    },
     {
         alvin: {
-            year: "2025 - Present",
-            role: "QA Engineer",
+            year: "2025 - 2026",
+            role: "Software QA Engineer",
             company: "Talleco Job Target",
             description: "Ensures product quality through automated and manual testing, improving system reliability and release stability."
         },
