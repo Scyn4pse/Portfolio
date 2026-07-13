@@ -5,8 +5,14 @@ const experiences = [
     {
         year: "2026 - Present",
         role: "Part-time College Instructor",
+        company: "iACADEMY Cebu",
+        description: "Teaches UI/UX design principles and industry-standard practices, guiding students in creating user-centered digital experiences through research, wireframing, prototyping, and usability testing."
+    },
+    {
+        year: "2026 - Present",
+        role: "Part-time College Instructor",
         company: "Don Bosco Technical College",
-        description: "Teaches web/mobile development, delivers hands-on projects, and evaluates student performance while building practical and industry-relevant skills."
+        description: "Delivered instruction in software and systems development, mentoring students in industry best practices, problem-solving, and the use of diverse technologies to design, build, and maintain quality digital solutions."
     },
     {
         year: "2025 - Present",
